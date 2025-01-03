@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700;900&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap");
+/* base rule  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px  */
+  /* scroll-behavior: smooth; */
+  /* scroll-snap-type: Y proximity; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+p,
+li,
+a,
+label {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: var(--para-color);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* theme */
+
+:root {
+  --main-color: #0062ff;
+  --supporting-color: #ebf3fe;
+  --font-color: #424242;
+  /* --bg-color: #ffffff; */
+  --bg-color: #f7fcff;
+  --heading-color: #000a19;
+  --hero-heading-color: #003b99;
+  --white-color: #ffffff;
+  --para-color: #504e4d;
+  --bnt-hover-bg-color: #003b99;
+  --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --footer-bg-color: #040d12;
+}
+
+/* layout */
+.container{
+  max-width: 142rem;
+  margin: 0 auto;
+  padding: 1.8rem 0;
+}
+
+.grid{
+  display: grid;
+}
+
+.grid-two--cols{
+  grid-template-columns: repeat(2,1fr);
+}
+
+.grid-three--cols{
+  grid-template-columns: repeat(3,1fr);
+}
+/* module / reusable  */
+
+.section-commom-heading{
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.section-commom-subheading{
+  color: var(--heading-color);
+}
+
+.section-common--title{
+  font-size: 2rem;
+  margin: 4rem 0 1.2rem 0;
+}
+
+.btn{
+  display: inline-block;
+  padding:1.2rem 3.2rem;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border-radius: 0.6rem;
+}
+/* states  */
+
+.btn:hover {
+  background-color: var(--bnt-hover-bg-color);
+  cursor: pointer;
+  box-shadow: var(--btn-box-shadow);
+}
+
+/***** navbar Section *****/
+.section-navbar{
+  width: 100%;
+  box-shadow: rgba(0,0,0,0.05) 0px 6px 24px 0px, rgba(0,0,0,0.08) 0px 0px 0px 1px;
+}
+
+.section-navbar .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-navbar .navbar ul{
+  display: flex;
+  gap: 3.2rem;
+  /* text-transform: capitalize; */
+  & li a{
+    color: var(--heading-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.6rem;
+    display: inline-block;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: -0.3rem;
+      left: 0;
+      width: 0%;
+      border-bottom: 0.2rem solid var(--main-color);
+      transition: all 0.3s linear;
+    }
+  }
+
+  & li a:hover::after{
+    width: 100%;
+  }
+}
+/* end navbar */
+
+
+/* hero section */
+
+main{
+  position: relative;
+  background-image: linear-gradient(
+    to top right,
+    #3d86fa,
+    #4484fb,
+    #679eff,
+    #b3d2ff,
+    #ebf3fe
+  );
+}
+
+.section-hero .grid{
+  align-items: center;
+  gap: 6.4rem;
+  
+  & .hero-subheading{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1.7rem;
+    word-spacing: 0.2rem;
+    color: var(--hero-heading-color);
+    font-weight: 700;
+  }
+
+  & .hero-heading{
+    font-size: 5.8rem;
+    font-family: "jost";
+    line-height: 1.5;
+    color: var(--hero-heading-color);
+    font-weight: 900;
+  }
+
+  & .hero-para{
+    color: var(--white-color);
+    margin: 2rem 0 4rem 0;
+  
+  }
+}
+.section-hero--image img{
+  width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+/* shape divider */
+.custom-shape-divider-bottom-1696162272 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1696162272 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 12rem;
+}
+
+.custom-shape-divider-bottom-1696162272 .shape-fill {
+  fill: #ffffff;
+}
+/* end shape divider */
+/* end hero section */
+
+/* about section  */
+
+.section-about .grid{
+  gap: 6.4rem;
+}
+
+.section-about .about-div{
+  text-align: center;
+}
+.section-about img{
+  padding: 2.4rem;
+  background-color: var(--supporting-color);
+  width: 15rem;
+  height: auto;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+}
+
+.about-div .icon:hover > img{
+  transform: rotate(360deg);
+  background: linear-gradient(to right, #0575e6, #021b79);
+}
+/* end about section  */
