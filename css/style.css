@@ -298,3 +298,97 @@ main{
   background-color:#dce9fa;
 }
 /* end Course section */
+
+/* why choose section */
+
+.section-why--choose .grid{
+  gap: 9.6rem;
+}
+
+.why-choose--div{
+  margin-top: 3.2rem;
+}
+
+.section-why--choose .text-align--right .why-choose--div{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  text-align: right;
+}
+
+.common-text--highlight{
+  width: 6rem;
+  aspect-ratio: 1;
+  background-color: var(--supporting-color);
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.choose-center--div img{
+  width: 90%;
+  height: auto;
+}
+
+.choose-center--div, figure{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.choose-center--div figure:before, .choose-center--div figure::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color);
+  width: 45rem;
+  /* aspect-ratio: 1; */
+  height: 45rem;
+  border-radius: 50%;
+  z-index: -1;
+  
+}
+
+.choose-center--div figure::before{
+  animation: circle 5s linear infinite;
+}
+
+@keyframes circle{
+  0%{
+    background-color: #b3d0ff;
+  }
+
+  25%{
+    background-color: #80b1ff;
+  }
+
+  50%{
+    background-color: #4d91ff;
+  }
+
+  75%{
+    background-color: #99c0ff;
+  }
+
+  100%{
+    background-color: #3381ff;
+  }
+ 
+}
+
+.choose-center--div figure::after{
+  width: 50rem;
+  height: 50rem;
+  background-color: transparent;
+  z-index: -2;
+  border: 0.5rem solid var(--supporting-color);
+}
+/* end why choose section */
