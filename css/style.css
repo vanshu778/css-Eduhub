@@ -79,6 +79,10 @@ li {
 .grid-three--cols{
   grid-template-columns: repeat(3,1fr);
 }
+
+.grid-four--cols{
+  grid-template-columns: repeat(4,1fr);
+}
 /* module / reusable  */
 
 .section-commom-heading{
@@ -94,6 +98,14 @@ li {
 .section-common--title{
   font-size: 2rem;
   margin: 4rem 0 1.2rem 0;
+}
+
+.fa-solid {
+  padding: 2.4rem;
+  background-color: var(--supporting-color);
+  font-size: 2.4rem;
+  border-radius: 50%;
+  color: var(--hero-heading-color);
 }
 
 .btn{
@@ -224,7 +236,6 @@ main{
 /* end hero section */
 
 /* about section  */
-
 .section-about .grid{
   gap: 6.4rem;
 }
@@ -235,7 +246,7 @@ main{
 .section-about img{
   padding: 2.4rem;
   background-color: var(--supporting-color);
-  width: 15rem;
+  width: 14em;
   height: auto;
   border-radius: 50%;
   transition: all 0.3s linear;
@@ -245,4 +256,45 @@ main{
   transform: rotate(360deg);
   background: linear-gradient(to right, #0575e6, #021b79);
 }
-/* end about section  */
+/* end about section  */   
+
+/* Course section */
+
+.section-course .grid{
+  gap: 3.2rem;
+}
+
+.section-course .course-div{
+  padding: 3.2rem;
+}
+
+.section-course .course-div:hover{
+  box-shadow: var(--btn-box-shadow);
+}
+
+.course-div:nth-child(2) .icon .fa-solid{
+  color: #68bf9b;
+  background-color:#e7f6ef;
+}
+
+.course-div:nth-child(3) .icon .fa-solid{
+  color: #ff8b52;
+  background-color:#fbebe8;
+}
+.course-div:nth-child(4) .icon .fa-solid{
+  color: #183d3d;
+  background-color:#ccf7f7;
+}
+.course-div:nth-child(5) .icon .fa-solid{
+  color: #d988b9;
+  background-color: rgb(247, 223, 238);
+}
+.course-div:nth-child(6) .icon .fa-solid{
+  color: #ff9b50;
+  background-color:#f6dfce;
+}
+.course-div:nth-child(2) .icon .fa-solid{
+  color: #1450a3;
+  background-color:#dce9fa;
+}
+/* end Course section */
