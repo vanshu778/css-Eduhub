@@ -392,3 +392,43 @@ main{
   border: 0.5rem solid var(--supporting-color);
 }
 /* end why choose section */
+
+/* contact home section */
+.section-contact-homepage{
+  width: 60%;
+  height: 30rem;
+  margin: 0 auto ;
+  box-shadow: rgba(60,64,67,0.3) 0px 1px 2px 0px, rgba(60,64,67,0.15) 0px 2px 6px 2px;
+  margin-bottom: 5rem;
+  border-radius: 0.2rem;
+
+  & .grid{
+    align-items: center;
+  }
+}
+
+.contact-title{
+  font-size: 3.8rem;
+  line-height: 1.2
+}
+
+.contact-content p{
+  margin: 1.2rem 0 2.4rem 0;
+}
+
+.section-contact-homepage a{
+  color: var(--white-color);
+  text-transform: capitalize;
+}
+
+.section-contact-homepage .fa-solid{
+  padding: 0;
+  color: var(--white-color);
+  background-color: var(--main-color);
+}
+
+.section-contact-homepage img{
+  width: 90%;
+  height: auto;
+}
+/* end contact home section */
