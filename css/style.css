@@ -404,6 +404,51 @@ main{
 }
 /* end why choose section */
 
+/* blog section */
+
+.section-blog{
+  background-color: var(--bg-color);
+
+  & .grid{
+    gap: 6.4rem;
+  }
+
+  & .blog{
+    box-shadow: var(--btn-box-shadow);
+    transition:scale 0.3s linear;
+
+    &:hover{
+      scale: 1.1;
+    };
+
+    & .blog-content{
+      padding: 1.4rem 2.4rem 2.4rem;
+    }
+  }
+
+  & img{
+    width: 100%;
+    height: auto;
+  }
+
+  & .blog-date{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  & .fa-solid{
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+& .section-common--title{
+  margin-top: 0.8rem;
+}
+/* end blog section */
+
 /* contact home section */
 .section-contact--homepage{
   width: 60%;
