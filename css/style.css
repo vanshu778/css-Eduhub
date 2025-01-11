@@ -85,7 +85,7 @@ section-contact .container:first-child{
   .section-why--choose, 
   .section-contact--homepage
   ) .container:first-child{
-  padding: 0.4rem 0 2.4rem 0;
+  padding: 0.4rem 2.4rem 2.4rem 2.4rem;
 }
 
 .grid{
@@ -149,10 +149,11 @@ section-contact .container:first-child{
   box-shadow: rgba(0,0,0,0.05) 0px 6px 24px 0px, rgba(0,0,0,0.08) 0px 0px 0px 1px;
 }
 
-.section-navbar .container{
+.section-navbar .container{ 
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.8rem 2.4rem;
 }
 
 .section-navbar .navbar ul{
@@ -626,3 +627,161 @@ footer .grid{
 }
 
 /***** End scrollbar Section *****/
+
+/* scroll animation and scroll snap */
+
+/* media queries section */
+
+ @media(width<=1380px){
+  html{
+    font-size: 56.25%;
+  }
+
+  .section-hero img{
+    width: 90%;
+  }
+
+ }
+
+ @media(width<=1220px){
+  html{
+    font-size: 54%;
+  }
+
+  :is(
+    .section-about,
+    .section-blog,
+    .section-course,
+    .section-contact--homepage,
+    .section-why--choose
+  )
+  .grid{
+    gap:6.4rem;
+  }
+  }
+
+
+ @media(width<=1100px){
+  :is(.section-course, .section-blog) .grid-four--cols{
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+  }
+
+  .section-why--choose{
+
+    & .choose-left--div{
+        order: 2;
+    }
+
+    & .choose-right--div{
+      order: 2;
+  }
+
+      & .choose-center--div{
+        order: 1;
+
+        & figure::before{
+          width: 0;
+          height: 0;
+          background-color: transparent;
+          padding: 0;
+        }
+
+        & figure::after{
+          width: 0;
+          height: 0;
+          background-color: transparent;
+          padding: 0;
+        }
+      }
+  }
+
+ }
+
+ @media(width<=998px){
+  .section-hero{
+    height: auto;
+    padding-bottom: 5rem;
+    & .grid-two--cols{
+      grid-template-columns: 1fr;
+    
+
+    & .section-hero--content{
+      order: 2;
+    }
+
+    & .section-hero--image{
+      order: 1;
+ 
+      & img{
+        width: 50%;
+      }
+    }
+  }
+}
+.section-about .about-div{
+  text-align: left;
+}
+
+  footer .grid-four--cols{
+    grid-template-columns: repeat(3,minmax(100px,1fr));
+
+  & .footer-1--div{
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    margin-top: 6.4rem;
+  }
+ }
+}
+
+ @media(width<=768px){
+  .grid-two--cols,
+  .grid-three--cols{
+    grid-template-columns: 1fr;
+
+  }
+.section-navbar .container{
+  display: flex;
+  flex-direction: column ;
+
+  & .navbar ul{
+    gap: 2.4rem;
+  }
+
+  & .navbar-brand{
+    text-align: center;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.section-hero .grid .hero-heading{
+  font-size:3.8rem ;
+}
+.section-why--choose{
+  & img{
+    width: 30%;
+  }
+
+  & .grid{
+    gap: 1.4rem;
+  }
+ & .text-align--right .why-choose--div{
+    align-items: start;
+    text-align: left;
+  }
+}
+
+.section-contact--homepage .btn {
+  display: block;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.4rem;
+}
+:is(.section-contact--homepage) .container:first-child {
+  padding: 6.4rem 0rem 2.4rem 0rem;
+}
+
+ }
+ 
+/* end media queries section */
