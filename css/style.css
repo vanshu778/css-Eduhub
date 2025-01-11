@@ -68,12 +68,24 @@ li {
   padding: 1.8rem 0;
 }
 
-.section-about .container:first-child,
+/* .section-about .container:first-child,
 .section-blog .container:first-child,
 .section-course .container:first-child,
 .section-contact--homepage .container:first-child,
-.section-why--choose .container:first-child{
+.section-why--choose .container:first-child,
+section-contact .container:first-child{
   padding: 6.4rem 0 2.4rem 0;
+} */
+
+:is(
+  .section-about, 
+  .section-blog, 
+  .section-contact, 
+  .section-course, 
+  .section-why--choose, 
+  .section-contact--homepage
+  ) .container:first-child{
+  padding: 0.4rem 0 2.4rem 0;
 }
 
 .grid{
@@ -493,6 +505,46 @@ main{
   height: auto;
 }
 /* end contact home section */
+
+/* contact page */
+
+  .section-contact{
+  & .grid{
+    align-items: center;
+    gap: 6.4rem;
+  }
+  }
+
+  .mb-3{
+    margin-bottom: 3.2rem;
+  }
+
+  label{
+    display: block;
+    text-transform: capitalize;
+  }
+
+  .contact-content .grid{
+    gap: 6.4rem;
+  }
+
+  input, textarea{
+    width: 100%;
+    padding: 1.4rem 2.4rem;
+  }
+
+  ::placeholder{
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .btn-submit{
+    font-size: 1.8rem;
+    border: none;
+    text-transform: capitalize;
+  }
+
+  /* end contact page */
 
 /* footer section */
 footer{
